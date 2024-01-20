@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 70vh;
+        }
+        #container{
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            top: 50%;
+        }
+        #input1, #input2{
+            margin: 10px;
+            padding: 3px;
+            font-size: 20px;
+        }
+        #operation{
+            margin: 10px;
+            display: flex;
+            justify-content: center; 
+        }
+        .calc_button{
+            margin: 10px;
+            padding: 3px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input id="input1"
+        type="number" placeholder="enter 1st Number">
+        <input id="input2"
+        type="number" placeholder="enter 2st Number">
+    </div>
+    <div id="operation">
+        <button class="calc_button" onclick="add1()">Add</button>
+        <button class="calc_button" onclick="subtract1()">Subtract</button>
+        <button class="calc_button" onclick="multiply1()">Multiply</button>
+        <button class="calc_button" onclick="divide1()">Divide</button>
+    </div>
+</body>
+</html>
+<script>
+    let input1=document.getElementById("input1")
+    let input2=document.getElementById("input2")
+    
+    function add1(){
+        let sum=Number(input1.value)+Number(input2.value);
+        alert(`Sum is ${sum}.`);
+    }
+
+    function subtract1(){
+        let sub=Number(input1.value)-Number(input2.value);
+        alert(`Value is ${sub}.`);
+    }
+
+    function multiply1(){
+        let multiple=Number(input1.value)*Number(input2.value);
+        alert(`Value is ${multiple}.`);
+    }
+
+    function divide1(){
+        let division=Number(input1.value)/Number(input2.value);
+        alert(`Value is ${division}.`);
+    }
+</script>
